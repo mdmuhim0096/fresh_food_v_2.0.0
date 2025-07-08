@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* For WebKit browsers (Chrome, Safari, Edge Chromium) */
+#actualGallery::-webkit-scrollbar,
+#horizental::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* For Firefox */
+#actualGallery,
+#horizental {
+  scrollbar-width: none;
+  /* hides scrollbar */
+  -ms-overflow-style: none;
+  /* for older IE */
+}
+
+/* #testimoihead{
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 6px;
+} */
+
+@media (max-width: 641px) {
+  canvas {
+    max-height: 55vh;
+  }
+}
+
+canvas {
+  height: 95vh;
+}
+
+
+#testimoihead {
+  background-clip: text !important;
+  color: transparent;
+}
+
+
