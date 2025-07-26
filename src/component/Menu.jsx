@@ -6,6 +6,7 @@ import Tilt from "react-parallax-tilt";
 import Navbar from './Navbar';
 import { useLayoutEffect } from 'react';
 import Book from './Book';
+import Footer from './Footer';
 
 const Menu = () => {
     const path_2 = "./assets/food/";
@@ -55,7 +56,7 @@ const Menu = () => {
             <section className='w-full h-screen'>
                 <Book data={testCateory}/>
             </section>
-            <section className='overflow-hidden'>
+            <section className='overflow-hidden mb-10'>
                 <h1 className="">
                     <Textrender text={"Our Menu"} variant="skew" triggerId="dnfvn" />
                 </h1>
@@ -64,7 +65,7 @@ const Menu = () => {
                     <div onClick={() => { seeCategoeizedFood(data, index) }} key={index} className="sm:w-20 sm:h-auto rounded-md sm:py-2 text-center bg-green-400 hover:bg-green-700 cursor-pointer w-16 text-sm py-1">{data}</div>
                 ))}</div>
 
-                <div className="w-full h-auto duration-300 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1 sm:gap-2 md:gap-3 sm:p-2">{
+                <div className="w-full h-auto duration-300 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1 sm:gap-2 md:gap-3 sm:p-2 p-1">{
                     foods.map((data, index) => (
                         <Tilt key={index}>
                             <div id="foodcard" className="w-full h-[300px] rounded-md dark:border-none dark:bg-gray-700 border-2 shadow-lg p-1 sm:p-2 relative">
@@ -83,6 +84,7 @@ const Menu = () => {
                     ))
                 }</div>
             </section>
+            <Footer />
         </div>
     )
 }

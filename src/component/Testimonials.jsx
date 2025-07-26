@@ -41,7 +41,7 @@ const Testimonials = () => {
           <div id="testimoiheadcontainer" className="flex items-center h-[70vh] sm:h-screen">
             <h1 id="testimoihead" className="text-black dark:text-white text-[30vw] font-extrabold whitespace-nowrap text-transparent" style={{ background: "url('./assets/cvg.jpg')" }}>OUR TESTIMIALS</h1>
           </div>
-          <Space height={100} />
+          <Space height={isMobile ? 50 : 100} />
           <TextReder
             text={"⭐ What Our Customers Say"}
             triggerId="restimialsaction_"
@@ -51,7 +51,7 @@ const Testimonials = () => {
           <div id="service" className="px-3 sm:px-16 md:px-28">
             <AnimateText text={"Heartfelt experiences and genuine feedback from our valued customers who have tasted the difference in our food and felt the warmth of our service. These are the voices that inspire us every day."} splitType="word" animation="scale-up" fromStart="top 40%" triggerId={"service"} tagType="p" />
           </div>
-          <Space height={50} />
+          <Space height={isMobile ? 20 : 50} />
           <div id="feedBoxContainer">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 bottom-1 md:overflow-hidden p-5"
               ref={containerRef}
@@ -88,7 +88,7 @@ const Testimonials = () => {
               ))}
             </div>
           </div>
-          {isMobile ? <Space height={70} /> : <Space height={20} />}
+          {isMobile ? <Space height={20} /> : <Space height={20} />}
           {/* Review Platform Logos */}
           <div className="mt-16">
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
@@ -126,7 +126,7 @@ const Testimonials = () => {
           </div>
         </div>
       </section>
-      <Space height={40} />
+      <Space height={isMobile ? 20 : 40} />
       <Footer />
     </div>
   );

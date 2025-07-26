@@ -61,7 +61,7 @@ const TextReder = ({ text, triggerId = "typebox", variant = "fade-in", from = "t
   return (
     <section
       id={triggerId}
-      className="h-[52vh] flex justify-center items-center dark:text-white text-black"
+      className="h-auto my-8 sm:my-16 flex justify-center items-center dark:text-white text-black"
     >
       <h1
         ref={textRef}

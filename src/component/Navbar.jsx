@@ -30,10 +30,10 @@ const Navbar = () => {
     const setDarkModeHnadel = () => {
         localStorage.setItem("darkmode", isDarkMode === true || isDarkMode === "true" ? false : true);
         setDarkMode(isDarkMode === true || isDarkMode === "true" ? false : true)
-    }
+    } 
 
     return (
-        <nav className='flex justify-between items-center sm:items-start p-2 sticky top-0 left-0 z-50 dark:bg-gray-900 bg-white'>
+        <nav className='flex justify-between items-center sm:items-start p-1 sticky top-0 left-0 z-50 dark:bg-gray-900 bg-white'>
             <ul id='sitetile' className='flex items-center gap-7'>
                 <li className='text-2xl font-bold text-transparent capitalize'>
                     <img src={logo} className='w-32 h-16 object-fill' />
